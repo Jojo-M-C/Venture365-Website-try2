@@ -1,5 +1,5 @@
 # MAIN base
-baseURL = "https://633f19538eb47e0f8315542f--sage-malabi-d950f8.netlify.app/"
+baseURL = "https://main--sage-malabi-d950f8.netlify.app/"
 languageCode = "en-us"
 title = "Venture365"
 theme = "hugo-apsho-master"
