@@ -11,22 +11,20 @@ theme = "hugo-apsho-master"
     weight = 1
 [[menu.main]]
     name = "About"
-    url = "#feature"
+    url = "#services"
     weight = 2
-[[menu.main]]
-    name = "Services"
-    url = "#faq"
-    weight = 3
+
 [[menu.main]]
     name = "Blog"
     url = "#blog"
-    weight = 4
+    weight = 3
 
 # Footer Sitemap
 [[menu.sitemap]]
     name = "Home"
     url = "#"
     weight = 1
+
 [[menu.sitemap]]
     name = "Latest Article"
     url = "/blog"
