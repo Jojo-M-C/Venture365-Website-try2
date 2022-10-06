@@ -1,0 +1,9 @@
+---
+enable: true
+comment1: What is purpose? 
+comment2: a brief story
+buttonName: Available on
+button1text: Apple Store
+button2text: Google Play
+image: images/video/video.png
+video: https://www.youtube.com/watch?v=swnudbCnccs

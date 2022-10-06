@@ -1,0 +1,16 @@
+#  icons can be found on https://themify.me/themify-icons
+---
+enable: true
+title: What we do
+services:
+  - icon: ti-comments
+    title: Interviews
+    description: Top-notch interviews with the people that shape today's business landscape. 
+
+  - icon: ti-pulse
+    title: Articles
+    description: We're commited to to writing regular high quality articles on current world affairs. 
+
+  - icon: ti-money
+    title: Project Reviews
+    description: Every day, new projects come into existence, we try to keep up with the most intriguing and promising ones.
