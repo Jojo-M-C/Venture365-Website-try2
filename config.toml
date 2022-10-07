@@ -53,7 +53,7 @@ github = "https://github.com/StaticMania"
 [params]
 
 # Header
-logo = "images/logo.svg"
+logo = "images/logo4.png"
 fabFormURL = "https://fabform.io/f/zWMBVeW"
 googleAnalytics = "UA-175025671-2"
 
