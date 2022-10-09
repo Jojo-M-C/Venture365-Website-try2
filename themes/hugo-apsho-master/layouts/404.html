@@ -3,583 +3,130 @@
 <head>
 <style>
 
-
-@charset "UTF-8";
-
-/***********************************
-			/* 1. BODY */
-/***********************************/
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-text-size-adjust: none;
-}
-
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
-  padding: 0;
   margin: 0;
-  background: #181828;
-  font-size: 14px;
-  line-height: 1;
+  padding: 0;
+  background-color: #0a1821;
+  height: 100vh;
+  width: 100vw;
+  font-family: Roboto, Arial, sans-serif;
+  color: #fff;
+  text-align: center;
 }
-
-label {
-  cursor: pointer;
+.not-found {
+  width: 560px;
+  height: 225px;
+  margin-right: -10px;
 }
-
+.starry-sky {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.search-icon {
+  display: inline-block;
+}
+.notfound-copy {
+  color: #fff;
+  position: fixed;
+  top: 25px;
+  right: 10%;
+  text-align: right;
+}
+h1 {
+   font-weight: 700;
+  font-size: 40px;
+}
 a {
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  background: transparent;
+  font-weight: 300;
+  color: #fff;
+  border-bottom: 1.5px solid #5581d4;
   text-decoration: none;
-  color: #000;
+}
+a:hover {
+  font-weight: 300;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  text-decoration: none;
+}
+/* change to alternating star opacities */
+.all-stars {
+  animation: blinkblink 7s linear infinite;
 }
 
-input, select, button, textarea {
-  margin: 0;
-  font-size: 100%;
+@keyframes blinkblink {  
+  50% { opacity: 0.1; }
 }
-
-html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input {
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+.moon {
 }
-
-
-.top-header:before {
-    background-image: url(https://1.bp.blogspot.com/-gxsOcYWghHA/Xp_izTh4sFI/AAAAAAAAU8s/y637Fwg99qAuzW9na_NT_uApny8Vce95gCEwYBhgL/s1600/header-footer-gradient-bg.png);
-}
-.top-header:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-repeat: repeat-x;
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-  opacity:0.5;
-}
-
-
-.starsec{
-  content: " ";
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: transparent;
-   box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
-  animation: animStar 150s linear infinite;
-}
-
-.starthird
-{
-  content: " ";
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: transparent;
-   box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
-  animation: animStar 10s linear infinite;
-}
-
-.starfourth
-{
-  content: " ";
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: transparent;
-   box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
-  animation: animStar 50s linear infinite;
-}
-
-.starfifth
-{
-  content: " ";
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    background: transparent;
-   box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
-  animation: animStar 80s linear infinite;
-}
-
-@keyframes animStar
-{
-  0% {
-    transform: translateY(0px);
-}
-  100% {
-    transform: translateY(-2000px);
-}
-}
-
-
-
-button {
-  border: none;
-  padding: 0;
-  font-size: 0;
-  line-height: 0;
-  background: none;
-  cursor: pointer;
-}
-
-:focus {
-  outline: 0;
-}
-
-.clearfix:before, .clearfix:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  zoom: 1;
-}
-
-			/* 1. END BODY */
-/***********************************/
-
-/***********************************
-			/* 2. CONTENT */
-/***********************************/
-/* 2.1. Section error */
-.error {
-  min-height: 100vh;
-  position: relative;
-  padding: 240px 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  margin-top: 70px;
-}
-
-.error__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.error__content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.error__message {
-  text-align: center;
-  color: #181828;
-}
-
-.message__title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-   font-size: 5.6rem;
-  padding-bottom: 40px;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.message__text {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 42px;
+input[type=text] {
+  color: #fff;
+  background-color: #0a1821;
+  padding:5px; 
+  border: none; 
+  border-bottom:2px solid #ccc; 
   font-size: 18px;
-  padding: 0 60px;
-  max-width: 680px;
-  margin: auto;
 }
-
-.error__nav {
-  max-width: 600px;
-  margin: 40px auto 0;
-  text-align: center;
-}
-
-.e-nav__form {
-  position: relative;
-  height: 45px;
-  overflow: hidden;
-  width: 170px;
-  display: inline-block;
-  vertical-align: top;
-  border: 1px solid #212121;
-  padding-left: 10px;
-  padding-right: 46px;
-}
-
-.e-nav__icon {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  color: #212121;
-  -webkit-transition: color .25s ease;
-  transition: color .25s ease;
-}
-
-.e-nav__link {
-  height: 45px;
-  line-height: 45px;
-  width: 170px;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 15px;
-  border: 1px solid #181828;
-  color: #181828;
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: .1rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.e-nav__link:before {
-  content: '';
-  height: 200px;
-  background: #212121;
-  position: absolute;
-  top: 70px;
-  right: 70px;
-  width: 260px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  -webkit-transform: rotate(50deg);
-          transform: rotate(50deg);
-}
-
-.e-nav__link:after {
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  z-index: 999;
-  position: relative;
-}
-
-.e-nav__link:after {
-  content: "Home Page";
-}
-
-.e-nav__link:hover:before {
-  top: -60px;
-  right: -50px;
-}
-
-.e-nav__link:hover {
-  color: #fff;
-}
-
-.e-nav__link:nth-child(2):hover:after {
-  color: #fff;
-}
-/* 2.1. END Section Error */
-
-/* 2.2. Social style */
-.error__social {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 20px;
-  z-index: 10;
-}
-
-.e-social__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.e-social__icon {
-  padding-bottom: 30px;
-}
-
-.e-social__icon:last-child {
-  padding-bottom: 0;
-}
-
-.e-social__link {
-  color: #fff;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
-  display: block;
-}
-
-.e-social__link:hover {
-  opacity: .7;
-}
-/* 2.2. END Social style */
-
-/* 2.3. Lamp */
-.lamp {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  margin: 0px auto;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform-origin: center top;
-  animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);
-  animation: move 5.1s infinite;
-}
-
-@keyframes move {
-  0% {
-    transform: rotate(40deg);
+input[type=text]:focus {
+  border-color:none; 
+  border-bottom:2px solid #ccc;
   }
-  50% {
-    transform: rotate(-40deg);
-  }
-  100% {
-    transform: rotate(40deg);
-  }
-}
-
-.cable {
-  width: 8px;
-    height: 248px;
-    background-image: linear-gradient(rgb(32 148 218 / 70%), rgb(193 65 25)), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
-}
-
-.cover {
-  width: 200px;
-  height: 80px;
-  background: #0bd5e8;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  position: relative;
-  z-index: 200;
-}
-
-.in-cover {
-  width: 100%;
-  max-width: 200px;
-  height: 20px;
-  border-radius: 100%;
-  background: #08ffff;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  margin: 0px auto;
-  bottom: -9px;
-  z-index: 100;
-}
-.in-cover .bulb {
-     width: 50px;
-    height: 50px;
-    background-color: #08fffa;
-    border-radius: 50%;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: -20px;
-    margin: 0px auto;
-    -webkit-box-shadow: 0 0 15px 7px rgba(0,255,255,0.8), 0 0 40px 25px rgba(0,255,255,0.5), -75px 0 30px 15px rgba(0,255,255,0.2);
-    box-shadow: 0 0 25px 7px rgb(127 255 255 / 80%), 0 0 64px 47px rgba(0,255,255,0.5), 0px 0 30px 15px rgba(0,255,255,0.2);
-}
-
-
-.light {
-      width: 200px;
-    height: 0px;
-    border-bottom: 900px solid rgb(44 255 255 / 24%);
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 270px;
-    margin: 0px auto;
-    z-index: 1;
-    border-radius: 90px 90px 0px 0px;
-}
-/* 2.3. END Lamp */
-/***********************************
-			/* 2. END CONTENT */
-/***********************************/
-
-/***********************************
-			/* 3. RESPONSIVE */
-/***********************************/
-.error {
-  overflow: hidden;
-  max-height: 100vh;
-}
-@media (max-width: 1400px) { 
-  .lamp {
-    zoom: .5;
-  }
-  .error__content {
-    top: 55%;
-  }
-  .message__title {
-    font-size: 3.5rem;
-  }
-}
-@media (max-width: 900px) {
-
-  .message__title {
-    font-size: 34px;
-
-  }
-  .error__content {
-    top: 55%;
-  }
-  }
-@media (max-width: 950px) {
-  .lamp__wrap {
-    max-height: 100vh;
-    overflow: hidden;
-    max-width: 100vw;
-  }
-  .error__social {
-    bottom: 30px;
-    top: auto;
-    transform: none;
-    width: 100%;
-    position: fixed;
-    left: 0;
-  }
-  .e-social__icon {
-    display: inline-block;
-    padding-right: 30px;
-  }
-  .e-social__icon:last-child {
-    padding-right: 0;
-  }
-  .e-social__icon {
-    padding-bottom: 0;
-  }
-}
-@media (max-width: 750px) {
-  body, html, {
-    max-height: 100vh;
-  }
-   .error__content {
-    position: static;
-    margin: 0 auto;
-    transform: none;
-    padding-top: 300px;
-  }
-  .error {
-    padding-top: 0;
-    padding-bottom: 100px;
-    height: 100vh;
-  }
-  }
-@media (max-width: 650px) {
-  .message__title {
-    font-size: 36px;
-    padding-bottom: 20px;
-  }
-  .message__text {
-    font-size: 16px;
-    line-height: 2;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  .lamp {
-    zoom: .6;
-  }
-  .error__content {
-    padding-top: 180px;
-  }
-  }
-@media (max-width: 480px) {
-
-  .message__title {
-    font-size: 30px;
-  }
-  .message__text {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 15px;
-  }
-  .error__nav {
-    margin-top: 20px;
+/* mobile test * /
+@media (max-width: 647px) { 
+  .moon {
+    padding-top: -500px;
   }
 }
 
 </style>
+
 </head>
+
 <body>
 
-    <a href="https://codepen.io/uiswarup/full/yLzypyY" target="_blank">
-        <header class="top-header">
-      </header>
-      
-      <!--dust particel-->
-      <div>
-        <div class="starsec"></div>
-        <div class="starthird"></div>
-        <div class="starfourth"></div>
-        <div class="starfifth"></div>
+    <div class="notfound-copy">
+        <svg aria-labelledby="404" alt="404 Page not found" class="not-found">
+        <title id="svgtitle1">404 Page not found</title>
+        <g class="404-text">
+        <g opacity=".5" fill="#3B3D3D"><path d="M320.1 209.5c0 7.2-6 12.5-13.7 12.5s-13.7-5.4-13.7-12.5v-16.3h-43.8c-8.4 0-14.1-6.4-14.1-13.5 0-.8.8-4.4 2-7L275 84.5c2-4.8 7.2-7.8 12.3-7.8 6.8 0 13.7 6 13.7 12.9 0 1.2 0 2.6-.8 4.4-11.5 26.7-20.9 47.6-32.4 74.2h24.9v-30.4c0-7.2 6-12.5 13.7-12.5 7.4 0 13.7 5.4 13.7 12.5v30.4h2.6c7.6 0 13.3 5.8 13.3 12.3 0 7-5.8 12.5-13.3 12.5h-2.6v16.5zM436.9 123.9v54.7c0 24.3-16.3 43.6-46 43.6s-46-19.3-46-43.6v-54.7c0-26.3 13.9-47.4 46-47.4 32.1.1 46 21.2 46 47.4zm-64.3-1.4v56.1c0 11.3 6.4 19.1 18.3 19.1s18.3-7.8 18.3-19.1v-56.1c0-12.7-5.2-21.7-18.3-21.7s-18.3 9-18.3 21.7zM535 209.5c0 7.2-6 12.5-13.7 12.5s-13.7-5.4-13.7-12.5v-16.3h-43.8c-8.4 0-14.1-6.4-14.1-13.5 0-.8.8-4.4 2-7l38.2-88.2c2-4.8 7.2-7.8 12.3-7.8 6.8 0 13.7 6 13.7 12.9 0 1.2 0 2.6-.8 4.4-11.5 26.7-20.9 47.6-32.4 74.2h24.9v-30.4c0-7.2 6-12.5 13.7-12.5 7.4 0 13.7 5.4 13.7 12.5v30.4h2.6c7.6 0 13.3 5.8 13.3 12.3 0 7-5.8 12.5-13.3 12.5H535v16.5z"/></g>
+        <g fill="#FFF">
+          <path d="M326.4 197.5c0 7.2-6 12.5-13.7 12.5s-13.7-5.4-13.7-12.5v-16.3h-43.8c-8.4 0-14.1-6.4-14.1-13.5 0-.8.8-4.4 2-7l38.2-88.2c2-4.8 7.2-7.8 12.3-7.8 6.8 0 13.7 6 13.7 12.9 0 1.2 0 2.6-.8 4.4-11.5 26.7-20.9 47.6-32.4 74.2H299v-30.4c0-7.2 6-12.5 13.7-12.5 7.4 0 13.7 5.4 13.7 12.5v30.4h2.6c7.6 0 13.3 5.8 13.3 12.3 0 7-5.8 12.5-13.3 12.5h-2.6v16.5zM443.2 111.9v54.7c0 24.3-16.3 43.6-46 43.6s-46-19.3-46-43.6v-54.7c0-26.3 13.9-47.4 46-47.4 32.1.1 46 21.2 46 47.4zm-64.2-1.4v56.1c0 11.3 6.4 19.1 18.3 19.1s18.3-7.8 18.3-19.1v-56.1c0-12.7-5.2-21.7-18.3-21.7s-18.3 9-18.3 21.7zM541.4 197.5c0 7.2-6 12.5-13.7 12.5-7.8 0-13.7-5.4-13.7-12.5v-16.3h-43.8c-8.4 0-14.1-6.4-14.1-13.5 0-.8.8-4.4 2-7l38.2-88.2c2-4.8 7.2-7.8 12.3-7.8 6.8 0 13.7 6 13.7 12.9 0 1.2 0 2.6-.8 4.4-11.5 26.7-20.9 47.6-32.4 74.2H514v-30.4c0-7.2 6-12.5 13.7-12.5 7.4 0 13.7 5.4 13.7 12.5v30.4h2.6c7.6 0 13.3 5.8 13.3 12.3 0 7-5.8 12.5-13.3 12.5h-2.6v16.5z"/>
+          </g></g>
+      </svg>
+        <h1>page not found</h1>
+           <path opacity=".4" fill="#68A1D6" d="M22.3 3.7C20.5 2 18.1 1 15.6 1S10.8 2 9 3.7c-1.8 1.8-2.7 4.1-2.7 6.6 0 1.7.5 3.4 1.4 4.9l-6 6-.1.1c-.8.9-.8 2.2.1 3.1.8.8 2.2.9 3.1.1l6-6c1.5.9 3.1 1.4 4.9 1.4 2.5 0 4.9-1 6.6-2.7 3.6-3.8 3.6-9.8 0-13.5zm-2.9 10.5c-1 1-2.4 1.6-3.8 1.6s-2.8-.6-3.8-1.6-1.6-2.4-1.6-3.8.6-2.8 1.6-3.8S14.2 5 15.6 5s2.8.6 3.8 1.6c2.1 2.1 2.1 5.5 0 7.6z"/>
+        </svg>
+
+          <h1><a href="venture365.io">take me back home</a></h1>
+  
       </div>
-      <!--Dust particle end--->
       
-      
-      <div class="lamp__wrap">
-        <div class="lamp">
-          <div class="cable"></div>
-          <div class="cover"></div>
-          <div class="in-cover">
-            <div class="bulb"></div>
-          </div>
-          <div class="light"></div>
-        </div>
-      </div>
-      <!-- END Lamp -->
-      <section class="error">
-        <!-- Content -->
-        <div class="error__content">
-          <div class="error__message message">
-            <h1 class="message__title">Page Not Found</h1>
-            <p class="message__text">We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
-          </div>
-          <div class="error__nav e-nav">
-            <a href="https://venture365.co/" target="_blanck" class="e-nav__link"></a>
-          </div>
-        </div>
-        <!-- END Content -->
-      
-      </section>
-      
-        </a>
+      <svg aria-labelledby="Starry sky" alt="Starry sky" class="starry-sky">
+        <title id="svgtitle2">Starry sky</title>
+        <!-- STARS START -->
+        <g class="all-stars" fill="#F6F5BC">
+              <path class="stars-one" d="M148.9 151.5c-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5-1.7-6.2-6.2-6.2-6.2zM93.6 "/>
+          <path class="stars-two" d="M148.9 540.6c-4.9-1.6-6.2-6.2-6.2-6.2-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.8-.4-1zM526.3 551.7c-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5-1.7-6.2-6.2-6.2-6.2zM617.4 291.9c-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5-1.6-6.2-6.2-6.2-6.2zM681.9 42.7c-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5-1.7-6.2-6.2-6.2-6.2zM51.1 83.9c-.3-.3-.6-.4-1-.4s-.7.1-1 .4C47.5 88.8 43 90 43 90c-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5.1-1.6-6.3-6.1-6.3-6.1z"/>
+          <path class="all-stars" d="M148.9 151.5c-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5-1.7-6.2-6.2-6.2-6.2zM93.6 318.5c-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5-1.7-6.2-6.2-6.2-6.2zM132.3 169c-.2-.2-.4-.3-.6-.3s-.4.1-.6.3c-1 3.1-3.8 3.8-3.8 3.8-.2.2-.3.4-.3.6 0 .2.1.4.3.6 3.1 1 3.8 3.8 3.8 3.8.2.2.4.3.6.3s.4-.1.6-.3c1-3.1 3.8-3.8 3.8-3.8.2-.2.3-.4.3-.6 0-.2-.1-.4-.3-.6-3-.9-3.8-3.8-3.8-3.8zM585.9 269.5c-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5-1.7-6.2-6.2-6.2-6.2zM723.4 540.6c-4.9-1.6-6.2-6.2-6.2-6.2-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.8-.4-1zM526.3 551.7c-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5-1.7-6.2-6.2-6.2-6.2zM617.4 291.9c-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5-1.6-6.2-6.2-6.2-6.2zM681.9 42.7c-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-1.6 4.9-6.2 6.2-6.2 6.2-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5-1.7-6.2-6.2-6.2-6.2zM51.1 83.9c-.3-.3-.6-.4-1-.4s-.7.1-1 .4C47.5 88.8 43 90 43 90c-.3.3-.4.6-.4 1s.1.7.4 1c4.9 1.6 6.2 6.2 6.2 6.2.3.3.6.4 1 .4s.7-.1 1-.4c1.6-4.9 6.2-6.2 6.2-6.2.3-.3.4-.6.4-1s-.1-.7-.4-1c-5.1-1.6-6.3-6.1-6.3-6.1z"/>
+        </g>
+        <!-- Moon shadow -->
+        <g class="moon">
+          <path opacity=".5" fill="#3B3D3D" d="M122.7 373.9L-237.1 744l283.8 269.4 279.9-492.8z"/>
+          <!-- Moon color base -->
+          <g fill="#D1D5D6">
+            <path d="M209 340.6c-70.9 0-128.4 57.5-128.4 128.4S138.1 597.4 209 597.4 337.4 539.9 337.4 469 279.9 340.6 209 340.6zm-41.9 176.1c0 10.9-8.9 19.8-19.8 19.8s-19.8-8.9-19.8-19.8c0-1.4.1-2.7.4-4-18.3-1.7-32.6-17-32.6-35.7 0-19.8 16.1-35.9 35.9-35.9 19.8 0 35.9 16.1 35.9 35.9 0 8.9-3.3 17.1-8.6 23.3 5.1 3.7 8.6 9.7 8.6 16.4zm20.2 3.9c0-8.8 7.1-16 16-16 8.8 0 16 7.1 16 16 0 8.8-7.1 16-16 16-8.9-.1-16-7.2-16-16zm5.8-43.5c0-13.3 10.7-24 24-24s24 10.7 24 24-10.7 24-24 24-24-10.8-24-24zm72.7 86.4c-4.2 0-8.2-.7-11.9-2-.5 12.8-11 23.1-24 23.1-13.3 0-24-10.7-24-24s10.7-24 24-24h1.1c-.7-2.9-1.1-5.8-1.1-8.9 0-19.8 16.1-35.9 35.9-35.9 19.8 0 35.9 16.1 35.9 35.9s-16.1 35.8-35.9 35.8zm10.9-91.1c0 2.6-2.1 4.6-4.6 4.6-2.6 0-4.6-2.1-4.6-4.6 0-2.6 2.1-4.6 4.6-4.6 2.5 0 4.6 2.1 4.6 4.6zm27.7 13.1c-2.1 2-4.9 3.2-8.1 3.2-6.5 0-11.7-5.2-11.7-11.7 0-6.5 5.2-11.7 11.7-11.7.5 0 1.1 0 1.6.1-1.5-3.6-3.2-7.1-5.1-10.5 2.5-4 3.9-8.7 3.9-13.8 0-14.6-11.8-26.4-26.4-26.4-3.6 0-7 .7-10.2 2-4.9-3.8-10.2-7.2-15.7-10.2.1 1 .2 2 .2 3.1 0 17.4-14.1 31.5-31.5 31.5-16.7 0-30.4-13-31.4-29.5 0-.7-.1-1.3-.1-2 0-3.4.5-6.6 1.5-9.6.9-2.8 2.2-5.5 3.8-7.9-2.2 0-4.3.1-6.5.2-3.8-6.7-11-11.2-19.2-11.2-11.8 0-21.5 9.3-22.1 21-17.1 7.5-32.1 18.8-43.9 32.8 14.3-50.3 60.6-87.2 115.6-87.2 66.3 0 120.1 53.8 120.1 120.1 0 29.5-10.6 56.4-28.2 77.3 3-10.5 4.6-21.5 4.6-32.9.1-9.1-.9-18.1-2.9-26.7z"/><circle cx="256.3" cy="384.3" r="14.1"/></g><g fill="#FFF"><circle cx="217.1" cy="477.1" r="24"/><path d="M265.8 491.7c-19.8 0-35.9 16.1-35.9 35.9 0 3.1.4 6.1 1.1 8.9h-1.1c-13.3 0-24 10.7-24 24s10.7 24 24 24c12.9 0 23.5-10.2 24-23.1 3.7 1.3 7.7 2 11.9 2 19.8 0 35.9-16.1 35.9-35.9s-16.1-35.8-35.9-35.8zM131.2 441.2c-19.8 0-35.9 16.1-35.9 35.9 0 18.7 14.3 34.1 32.6 35.7-.3 1.3-.4 2.6-.4 4 0 10.9 8.9 19.8 19.8 19.8s19.8-8.9 19.8-19.8c0-6.8-3.4-12.8-8.6-16.3 5.4-6.3 8.6-14.4 8.6-23.3 0-20-16.1-36-35.9-36z"/><path d="M331 467.9c0-66.3-53.8-120.1-120.1-120.1-54.9 0-101.3 36.9-115.6 87.2 11.8-14.1 26.9-25.4 43.9-32.8.6-11.7 10.2-21 22.1-21 8.2 0 15.4 4.5 19.2 11.2 2.2-.1 4.3-.2 6.5-.2-1.6 2.4-2.9 5.1-3.8 7.9-1 3-1.5 6.3-1.5 9.6 0 .7 0 1.3.1 2 1 16.5 14.7 29.5 31.4 29.5 17.4 0 31.5-14.1 31.5-31.5 0-1-.1-2.1-.2-3.1 5.5 3 10.7 6.4 15.7 10.2 3.1-1.3 6.6-2 10.2-2 14.6 0 26.4 11.8 26.4 26.4 0 5-1.4 9.8-3.9 13.8 1.9 3.4 3.6 6.9 5.1 10.5-.5-.1-1.1-.1-1.6-.1-6.5 0-11.7 5.2-11.7 11.7 0 6.5 5.2 11.7 11.7 11.7 3.1 0 6-1.2 8.1-3.2 2 8.6 3 17.6 3 26.8 0 11.4-1.6 22.5-4.6 32.9 17.5-21 28.1-48 28.1-77.4z"/>
+          <circle cx="203.2" cy="520.6" r="16"/>
+          <circle cx="272.1" cy="472.4" r="4.6"/></g>
+          <path opacity=".1" fill-rule="evenodd" clip-rule="evenodd" fill="#3B3D3D" d="M201.2 368.2l-.4-.8c-.4-.7-1.4-1-2.1-.6l-80.5 46.8c-.7.4-1 1.4-.6 2.1l.4.8c.3.5.8.8 1.4.8.3 0 .5-.1.8-.2l1-.6c0 .1.1.3.2.4l24.2 41.7c.2.4.7.7 1.2.7.2 0 .5-.1.7-.2l34.1-19.8c.3-.2.5-.5.6-.8.1-.4 0-.7-.1-1l-24.2-41.7-.3-.3 43.2-25.1c.4-.2.6-.5.7-1-.1-.4-.1-.8-.3-1.2z"/>
+          <!-- Flag stick -->
+          <g><path fill="#acacac" stroke="#B5B5B6" stroke-miterlimit="10" d="M200.8 369.5c-.2.6-.8 1-1.4.8l-.9-.2c-.6-.2-1-.8-.8-1.4l25.5-89.5c.2-.6.8-1 1.4-.8l.9.2c.6.2 1 .8.8 1.4l-25.5 89.5z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#263563" stroke="#B5B5B6" stroke-miterlimit="10" d="M262.9 334c-.1.5-.7.8-1.2.7l-46.4-13.2c-.5-.1-.8-.7-.7-1.2l10.8-38c.1-.5.7-.8 1.2-.7l46.4 13.2c.5.1.8.7.7 1.2l-10.8 38z"/>
+            <g fill-rule="evenodd" clip-rule="evenodd" fill="#263563"> <!-- #F9DA1E -->
+              <path d="M249 311.1c.4.6.8 1.1 1.2 1.6.4.5.9.9.3 1.6.8.2 1.6.3 2.3.5-.1.4-.2.6-.2.9 0 .1.1.2.1.3.1-.1.2-.1.2-.2l.3-.9c.7.3 1.4.5 2.1.7.1-.8.1-.8 1-1.2.7-.3 1.3-.5 2-.8-.5-.7-.5-.7 0-1.3.1-.2.2-.4.4-.5-.5-.5-1.6.1-1.6-1.1-.4.3-.7.5-1 .7-.2.1-.4.1-.6.2 0-.2 0-.4.1-.6l.9-1.8c-.3.1-.6.1-.8.2-.2-.7-.3-1.3-.5-2-.5.5-1 .9-1.5 1.4l-.6-.6c-.1.8-.1 1.5-.2 2.3 0 .1-.1.3-.2.4-.1-.1-.3-.2-.3-.3-.2-.4-.3-.8-.5-1.2-.6.5-.6.5-1.3.2-.2-.1-.4-.1-.6-.2-.4.5.4 1.5-1 1.7z"/>
+              <path d="M260.2 298.6c-.6 1.1-1.2 2.2-1.8 3.4-.6 1.3-1.3 2.5-1.9 3.8-.4.8-.5.9-1.4.4.2-.8.4-1.6.5-2.4.1-.5.1-1 .2-1.5.1-1.8-1.4-3.7-3.2-3.9-.1 0-.4.2-.5.3-.9 1.6-1.7 3.3-2.5 5 0 .1-.1.2-.1.2-.2.2-.1.6-.6.4-.4-.2-.1-.4-.1-.7.2-.9.4-1.8.5-2.8 0-.7-.1-1.4-.3-2.1-.1-.4-.3-.5-.8-.4-1.8.7-3.3 1.7-4.5 3.1-2.5 2.6-4.3 5.6-5.2 9.1-.5 1.9-.5 3.8.3 5.6.8 1.7 1.2 1.8 2.8.8.7-.4 1.3-.9 2-1.4.3-.2.6-.3 1 0-1.2 1-2.4 2-3.7 2.9.7.6 1.6.8 2.6 1 2.5.4 4.6-.7 6.4-2.3.7-.6 1.2-.5 1.9-.2v.1c-2 2.2-4.2 4.1-7.3 4.3-2.3.2-4.4-.4-6.4-1.8-.2-.2-.5-.3-.8-.3-5.5.1-9.3-3.9-9-9.4 0-.7.1-1.4.2-2 .2-.6.4-1.3.5-1.9.1-.2.2-.3.3-.5.6-1.2 1.1-2.5 1.9-3.6 2.5-3.8 5.9-6.4 10.5-7.2 1.9-.3 3.9-.3 5.6.6 1.1.6 2.1.7 3.3.7.6 0 1.2.1 1.8.1.5.1.9.3 1.4.4.2.1.5.3.7.4.8.6 1.6 1.1 2.4 1.7.4.3.8.4 1.2.1.4-.2.7-.5 1.1-.7.3.5.7.6 1 .7zm-13.4-2c-.7-.5-2.1-.7-3.4-.6-2.1.2-3.8 1.2-5.3 2.4-2.4 2-4.2 4.6-5.5 7.5-.8 1.7-1.3 3.5-1.3 5.4 0 2.5.8 4.6 3.1 5.9.6.3 1.2.5 1.9.8 0-.1.1-.1.1-.2s-.1-.2-.1-.2c-1-1.5-1.4-3.1-1.4-4.9-.1-2.3.5-4.5 1.5-6.6 1.6-3.3 3.9-6.1 7.1-8 .9-.5 2.1-.9 3.3-1.5z"/>
+              <path d="M249 311.1c1.4-.1.5-1.1.8-1.8.2.1.4.1.6.2.7.3.7.3 1.3-.2.2.4.3.8.5 1.2l.3.3c.1-.1.2-.3.2-.4.1-.7.1-1.5.2-2.3l.6.6c.5-.4 1-.9 1.5-1.4.2.7.4 1.3.5 2 .3-.1.5-.1.8-.2-.3.7-.6 1.2-.9 1.8-.1.2-.1.4-.1.6.2-.1.4-.1.6-.2.3-.2.6-.4 1-.7 0 1.2 1.1.7 1.6 1.1-.1.2-.2.3-.4.5-.5.7-.5.7 0 1.3-.7.3-1.3.5-2 .8-.8.3-.8.3-1 1.2-.7-.2-1.3-.5-2.1-.7l-.3.9c0 .1-.2.2-.2.2 0-.1-.1-.2-.1-.3 0-.3.1-.5.2-.9-.7-.2-1.5-.3-2.3-.5.6-.7.1-1.2-.3-1.6-.1-.5-.5-1-1-1.5z"/></g></g></g>
+      </svg>
 
 </body>
 </html>
