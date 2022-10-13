@@ -9,33 +9,58 @@ theme = "hugo-apsho-master"
     name = "Home"
     url = "#hero"
     weight = 1
+
 [[menu.main]]
-    name = "About"
-    url = "#services"
+    name = "Interviews"
+    url = "#interviews"
     weight = 2
 
 [[menu.main]]
-    name = "Blog"
-    url = "#blog"
+    name = "Articles"
+    url = "#articles"
+    weight = 3
+
+[[menu.main]]
+    name = "Projects"
+    url = "#projects"
     weight = 3
 
 # Footer Sitemap
-[[menu.sitemap]]
-    name = "Home"
-    url = "#"
-    weight = 1
 
 [[menu.sitemap]]
-    name = "Latest Article"
-    url = "/blog"
+    name = "Imprint"
+    url = "/imprint"
     weight = 2
+
 [[menu.sitemap]]
     name = "Privacy & Policy"
     url = "/privacy"
-    weight = 3
+    weight = 1
+
 [[menu.sitemap]]
     name = "Contact"
     url = "/contact"
+    weight = 3
+
+[[menu.mainfooter]]
+    name = "Home"
+    url = "/home"
+    weight = 1
+
+[[menu.mainfooter]]
+    name = "Interviews"
+    url = "/interviews"
+    weight = 2
+
+[[menu.mainfooter]]
+    name = "Articles"
+    url = "/articles"
+    weight = 3
+
+
+[[menu.mainfooter]]
+    name = "Projects"
+    url = "/projects"
     weight = 4
 
 # Footer Address
@@ -58,7 +83,7 @@ fabFormURL = "https://fabform.io/f/zWMBVeW"
 googleAnalytics = "UA-175025671-2"
 
 # Footer
-footerTitle = "Join our newsletter"
+footerTitle = "Join Our Newsletter"
 copyright1 = "All right reserved"
 copyright2 = "Copyright © Venture365 {year}"
 

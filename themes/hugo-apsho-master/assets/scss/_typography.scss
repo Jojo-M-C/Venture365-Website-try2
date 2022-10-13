@@ -12,7 +12,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+h7 {
   color: $text-color-dark;
   font-family: $primary-font;
   font-weight: 700;
@@ -63,3 +64,14 @@ h6 {
   color: $text-color-dark;
   font-family: $primary-font;
 }
+
+h7 {
+  font-size: 20px;
+  color: $text-color-dark;
+  font-family: $primary-font;
+  text-align: center;
+}
+
+
+
+

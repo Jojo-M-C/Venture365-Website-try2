@@ -46,30 +46,23 @@
     </div>
     <div class="row">
       <div class="col-lg-4 col-md-4">
-        <div class="footer-description">
-          <p> <br> <br> </p>
-          <!-- <img src="{{ .Site.Params.logo | absURL }}" alt="logo"> -->
-          <p>
-            {{ .Site.Params.copyright1 }}
-              </br>
-              {{ replace .Site.Params.copyright2   "{year}" now.Year | safeHTML }}
-          </p>
-          <ul class="footer-description-social">
-            <li>
-              <a href="{{ .Site.Params.social.facebook }}"><i class="ti-facebook"></i></a>
-            </li>
-            <li>
-              <a href="{{ .Site.Params.social.twitter }}"><i class="ti-twitter-alt"></i></a>
-            </li>
-            <li>
-              <a href="{{ .Site.Params.social.github }}"><i class="ti-github"></i></a>
-            </li>
-          </ul>
+        <div class="col-lg-4 col-md-4">
+          <div class="footer-widget">
+            <h4>Menu</h4>
+            <div class="footer-widget-list">
+              <ul>
+                {{ $mainfooter := .Site.Menus.mainfooter }}
+                  {{ range $mainfooter }}
+                    <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-4">
         <div class="footer-widget">
-          <h4>Sitemap</h4>
+          <h4>Navigate</h4>
           <div class="footer-widget-list">
             <ul>
               {{ $sitemap := .Site.Menus.sitemap }}
@@ -94,6 +87,27 @@
           </div>
         </div>
       </div>
+ 
+    </div>
+    <div class="text-center">
+      <p> <br>  </p>
+
+      <p>
+        {{ .Site.Params.copyright1 }}
+          </br>
+          {{ replace .Site.Params.copyright2   "{year}" now.Year | safeHTML }}
+      </p>
+      <ul class="footer-description-social">
+        <li>
+          <a href="{{ .Site.Params.social.facebook }}"><i class="ti-facebook"></i></a>
+        </li>
+        <li>
+          <a href="{{ .Site.Params.social.twitter }}"><i class="ti-twitter-alt"></i></a>
+        </li>
+        <li>
+          <a href="{{ .Site.Params.social.github }}"><i class="ti-github"></i></a>
+        </li>
+      </ul>
     </div>
   </div>
 </footer>
@@ -106,3 +120,23 @@
 <script src="{{ $formhandler.Permalink }}"></script> -->
 {{ $script := resources.Get "js/script.js" | minify }}
 <script src="{{ $script.Permalink }}"></script>
+
+<!-- <div class="footer-description">
+  <p> <br> <br> </p>
+  <p>
+    {{ .Site.Params.copyright1 }}
+      </br>
+      {{ replace .Site.Params.copyright2   "{year}" now.Year | safeHTML }}
+  </p>
+  <ul class="footer-description-social">
+    <li>
+      <a href="{{ .Site.Params.social.facebook }}"><i class="ti-facebook"></i></a>
+    </li>
+    <li>
+      <a href="{{ .Site.Params.social.twitter }}"><i class="ti-twitter-alt"></i></a>
+    </li>
+    <li>
+      <a href="{{ .Site.Params.social.github }}"><i class="ti-github"></i></a>
+    </li>
+  </ul>
+</div> -->
