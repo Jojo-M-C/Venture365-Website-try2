@@ -46,9 +46,9 @@ phone = "+43 660 000 0000"
 
 # Footer Social
 [params.social]
-facebook = "https://www.facebook.com/pg/staticmania"
-twitter = "https://twitter.com/static_mania"
-github = "https://github.com/StaticMania"
+facebook = "https://www.facebook.com"
+twitter = "https://twitter.com/"
+github = "https://github.com"
 
 [params]
 
