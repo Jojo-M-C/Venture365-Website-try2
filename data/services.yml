@@ -3,14 +3,14 @@
 enable: true
 title: What we do
 services:
-  - icon: ti-comments
+  - icon: ti-quote-right
     title: Interviews
     description: Top-notch interviews with the people that shape today's business landscape. 
 
-  - icon: ti-pulse
+  - icon: ti-world
     title: Articles
     description: We're commited to to writing regular high quality articles on current world affairs. 
 
-  - icon: ti-money
+  - icon: ti-rocket
     title: Project Reviews
     description: Every day, new projects come into existence, we try to keep up with the most intriguing and promising ones.
